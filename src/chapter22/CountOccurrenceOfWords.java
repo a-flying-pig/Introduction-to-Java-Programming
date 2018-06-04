@@ -1,4 +1,4 @@
-package capture22;
+package chapter22;
 
 import java.util.HashMap;
 import java.util.Map;

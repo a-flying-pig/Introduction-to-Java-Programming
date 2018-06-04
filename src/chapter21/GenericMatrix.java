@@ -1,4 +1,4 @@
-package capture21;
+package chapter21;
 
 public abstract class GenericMatrix<E extends Number> {
 	

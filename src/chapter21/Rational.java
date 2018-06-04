@@ -1,4 +1,4 @@
-package capture21;import javax.security.auth.x500.X500Principal;
+package chapter21;import javax.security.auth.x500.X500Principal;
 
 public class Rational extends Number {
 	/**

@@ -1,4 +1,4 @@
-package capture21;
+package chapter21;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 
