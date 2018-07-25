@@ -10,6 +10,15 @@ public abstract class AbstractGraph<V> implements Graph<V> {
 	protected List<V> vertices; // Store vertices
 	protected List<List<Integer>> neighbors; // Adjacency lists;
 	
+	/** Construct a graph from edges and vertices stored in arrays */
+	protected AbstractGraph(int[][] edges, V[] vertices) {
+		this.vertices = new ArrayList<V>();
+		for (int i = 0; i < vertices.length; i++)
+			this.vertices.add(vertices[i]);
+		
+		createAdjacencyLists(edges, vertices.length);
+	}
+	
 	/** 
 	 * Construct a graph from edges and vertices stored in list
 	 */
@@ -26,13 +35,13 @@ public abstract class AbstractGraph<V> implements Graph<V> {
 		createAdjacencyLists(edges, numberOfVerticies);
 	}
 	
-	/** Construct a graph from integer vertices 0, 1, and edge array */
-	protected AbstractGraph(int[][] edges, V[] vertices) {
-		this.vertices = new ArrayList<V>();
-		for (int i = 0; i < vertices.length; i++)
-			this.vertices.add(vertices[i]);
-		
-		createAdjacencyLists(edges, vertices.length);
+	/** Construct a graph for integer vertices 0, 1, and edges array */
+	protected AbstractGraph(int[][] edges, int numberOfVertices) {
+		vertices = new ArrayList<>(); // Create vertices
+		for (int i = 0; i < numberOfVertices; i++) {
+			vertices.add((V)(new Integer(i))); // vertices is {0, 1, ...}
+		}
+		createAdjacencyLists(edges, numberOfVertices);
 	}
 	
 	/** Create a adjacency lists for each vertex */
