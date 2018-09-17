@@ -190,7 +190,7 @@ public abstract class AbstractGraph<V> implements Graph<V> {
 	public Tree bfs(int v) {
 		List<Integer> searchOrders = new ArrayList<>();
 		int[] parent = new int[vertices.size()];
-		for (int i = 0; i < parent.length; i++) {
+		for (int i = 0; i < parent.length; i++) 
 			parent[i] = -1; // Initialize parent[i]	to -1
 			
 			LinkedList<Integer> queue = new LinkedList<>(); // list used as a queue
@@ -208,9 +208,7 @@ public abstract class AbstractGraph<V> implements Graph<V> {
 						isVisited[w] = true; // Mark it visited
 					}
 				}
-				
 			}
-		}
 		
 		return new Tree(v, parent, searchOrders);
 	}
