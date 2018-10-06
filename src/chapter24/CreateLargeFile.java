@@ -22,8 +22,12 @@ public class CreateLargeFile {
 		// Display first 100 numbers
 		DataInputStream input = 
 				new DataInputStream(new FileInputStream("largedata.dat"));
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 100; i++) {
 			System.out.print(input.readInt() + " ");
+			if (((i + 1) % 10) == 0) {
+				System.out.println();
+			}
+		}
 		input.close();
 	}
 }
