@@ -21,5 +21,23 @@ public class TestWeightedGraph {
 				{11, 8, 810}, {11, 9, 1187}, {11, 10, 239}
 				
 		};
+		
+		WeightedGraph<String> graph1 = new WeightedGraph<>(edges, vertices);
+		System.out.println("The number of vertices in graph1: " + graph1.getSize());
+		System.out.println("The vertex with index 1 is " + graph1.getVertex(1));
+		System.out.println("The index for Miami is " + graph1.getIndex("Miami"));
+		System.out.println("The edges for graph1:");
+		graph1.printWeightedEdges();
+		
+		edges = new int[][]{
+			{0, 1, 2}, {0, 3, 8},
+			{1, 0, 2}, {1, 2, 7}, {1, 3, 3},
+			{2, 1, 7}, {2, 3, 4}, {2, 4, 5},
+			{3, 0, 8}, {3, 1, 3}, {3, 2, 4}, {3, 4, 6},
+			{4, 2, 5}, {4, 3, 6}
+		};
+		WeightedGraph<Integer> graph2 = new WeightedGraph<>(edges, 5);
+		System.out.println("\nThe edges for graph2:");
+		graph2.printWeightedEdges();
 	}
 }
