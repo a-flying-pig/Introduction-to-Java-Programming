@@ -47,10 +47,11 @@ public class Client extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true); // It is necessary to show the frame here!
 		
-/*		try {
+ 		try {
 			// Create a socket to connect to the server
 			Socket socket = new Socket("localhost", 8000);
-		    
+			System.out.println("local port : " + socket.getLocalPort());
+			
 			// Create an input stream to receive data from the server
 			fromServer = new DataInputStream(
 					socket.getInputStream());
@@ -62,7 +63,7 @@ public class Client extends JFrame {
 		} catch (IOException e) {
 			// TODO: handle exception
 			jta.append(e.toString() + '\n');
-		}*/
+		}
 		
 	}
 
@@ -70,7 +71,7 @@ public class Client extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			
-			try {
+/*			try {
 				// Create a socket to connect to the server
 				Socket socket = new Socket("localhost", 8000);
 			    
@@ -85,7 +86,7 @@ public class Client extends JFrame {
 			} catch (IOException e1) {
 				// TODO: handle exception
 				jta.append(e1.toString() + '\n');
-			}
+			}*/
 			
 			try {
 				// Get the radius from the text field

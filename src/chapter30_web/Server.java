@@ -37,6 +37,12 @@ public class Server extends JFrame {
 			// Listen for a connection request
 			Socket socket = serverSocket.accept();
 			System.out.println("Server " + "serverSocket.accept() ");
+			System.out.println("Server " + "serverSocket.accept() client's IP address is  "
+			+ socket.getInetAddress());
+			System.out.println("Server " + "serverSocket.accept() client's host name is  "
+			+ socket.getInetAddress().getHostName());
+			System.out.println("Server " + "serverSocket.accept() client's host address is  "
+			+ socket.getInetAddress().getHostAddress());
 			// Create data input and output streams
 			DataInputStream inputFromClient = new DataInputStream(
 					socket.getInputStream());
